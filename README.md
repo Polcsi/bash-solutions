@@ -1,16 +1,19 @@
-# Első zh feladat megoldásai
+# Első zh feladat megoldásai 'mslznt'
 
 ## 1. feladat (7p)
 Írjon shell szkriptet, amely az alábbi fájl bejegyzéseket a megfelelő jogosultságokkal együtt
 létrehozza az aktuális könyvtáron belül relatív fájl hivatkozásokat használva:
+
 Név Típus Jogosultság Helye
-EtAlone könyvtár rwxr-sr-x .
-dOxyGEN szim. link, aminek célja: git rwxrwxrwx .
-LILO könyvtár rwxr-xr-t .
-tmp állomány rw-r----- LILO
-.hidden könyvtár r-xr-xr-x EtAlone
-git állomány (git, GRUB hard link) r-------- .hidden
-GRUB állomány (git, GRUB hard link) r-------- .hidden
+| Név   | Típus   	| Jogosultság   | Helye   |
+| ----- | --------- | ------------- | ------- |
+| EtAlone | könyvtár | rwxr-sr-x     | .       |
+| dOxyGEN | szim. link, aminek célja: git | rwxrwxrwx | . |
+| LILO | könyvtár | rwxr-xr-t | . |
+| tmp | állomány | rw-r----- | LILO |
+| .hidden | könyvtár |  r-xr-xr-x | EtAlone |
+| git | állomány (git, GRUB hard link) | r-------- | .hidden |
+| GRUB | állomány (git, GRUB hard link) | r-------- | .hidden |
 
 ## 2. feladat (8p)
 Írjon shell szkriptet, amelyet egy paraméterrel lehetséges használni. A paraméter egy könyvtárat
