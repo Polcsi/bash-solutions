@@ -1,5 +1,7 @@
 #!/bin/bash
 # zh1 harmadik feladat
+#                    |
+# 3-ik oktet 192.168.0.1
 
 for FILE in ../../elements/*.html; do
     echo "$FILE"
