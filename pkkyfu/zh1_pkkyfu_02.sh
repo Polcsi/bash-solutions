@@ -10,7 +10,7 @@ CYAN='\033[1;36m'
 if [[ $# -eq 1 ]]; then
     if [[ -d "$1" ]]; then
         echo -e "${PURPLE}'$1'${NC}"
-        find $1 -maxdepth 1 -type f -size +6144c -printf "%p\t%M\t%s bytes\n"
+        find $1 -maxdepth 1 -type f -size +6144c -printf "%P\t%M\t%s bytes\n"
         hiddenDirCount=$(find $1 -maxdepth 1 -type d -name ".*" | wc -l)
         echo -e "${CYAN}Hidden directories count: $hiddenDirCount${NC}"
     else

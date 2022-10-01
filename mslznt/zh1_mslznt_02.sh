@@ -10,7 +10,7 @@ if [[ $# -eq 1 ]]; then
     if [ -d "$1" ]; then
         echo -e "${BLUE}'$1'${NC}"
         hiddenFilesCount=$(ls -a $1 | grep "^\." | wc -l)
-        find $1 -maxdepth 1 -type f -size -6144c -printf "%p\t%M\t%s byte\n"
+        find $1 -maxdepth 1 -type f -size -6144c -printf "%P\t%M\t%s byte\n"
         echo -e "${CYAN}Hidden files count: $hiddenFilesCount${NC}"
     else
         echo -e "${RED}'$1'${NC}"
