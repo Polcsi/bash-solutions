@@ -17,8 +17,8 @@ sudo useradd --uid 1200 --gid 100 student1
 sudo useradd --uid 2000 --gid 150 abc123
 sudo useradd --uid 3000 --gid 100 loser
 
-base="f_01"
-[ ! -d "f_01" ] && sudo mkdir f_01
+base="f_02"
+[ ! -d "f_02" ] && sudo mkdir f_02
 
 path="$base/var/www/A.html"
 d=$(dirname $path)
@@ -41,6 +41,8 @@ sudo touch $path
 sudo chmod 0640 $path
 sudo chown loser:users $path
 
-cd f_01
+cd $base
 sudo tree -a
 cd ..
+
+sudo rm -r $base
