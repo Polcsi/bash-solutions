@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<data><nic>eno1</nic><ip>10.0.0.254/24</ip></data>
+<data><nic>eno2</nic><ip>172.16.4.129/25</ip></data>
+<data><nic>eno3</nic><ip>192.168.3.1/25</ip></data>
+<data><nic>tun0</nic><ip>10.10.10.1/32</ip></data>
+</root>
