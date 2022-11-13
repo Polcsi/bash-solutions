@@ -7,4 +7,4 @@ sed -nr '/\/úr\/[0-9]{4}\.1[012]\.[0-9]{2}\./p' adat
 sed -i '/\/úr\/.*\/[0-9]\{1,6\}$/s/^/-/' adat
 
 # Az év első harmadában született urak esetében a születési idő oszlopot módosítsa úgy, hogy csak a születési év látszódjon. (3)
-sed 's/\.[0-9]\{2\}\.[0-9]\{2\}\.//g' adat
+sed -i '/\<úr\>/ {s/\.[0-9]\{2\}\.[0-9]\{2\}\.//g}' adat
