@@ -56,4 +56,4 @@ END {
         printf "%s: %.6s%\n", i,(lastNames[i] / counter) * 100
     }
 }
-' adat
+' adat | sort -rk 2
